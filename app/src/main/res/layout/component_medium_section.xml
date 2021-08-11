@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mediumSectionView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/posterImageView"
+        android:layout_width="200dp"
+        android:layout_height="110dp"
+        app:cardBackgroundColor="#AAAAAA"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/launcherImageView"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#AAAAAA"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/posterImageView"
+        app:layout_constraintTop_toBottomOf="@id/posterImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#202124"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/posterImageView"
+        app:layout_constraintStart_toEndOf="@id/launcherImageView"
+        app:layout_constraintTop_toTopOf="@id/launcherImageView"
+        tools:text="eFootball PES 2021" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/genreTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#5F6368"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/nameTextView"
+        app:layout_constraintStart_toStartOf="@id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        tools:text="Sports" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#5F6368"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/genreTextView"
+        app:layout_constraintTop_toBottomOf="@id/genreTextView"
+        tools:text="4.5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ratingImageView"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@id/ratingTextView"
+        app:layout_constraintStart_toEndOf="@id/ratingTextView"
+        app:layout_constraintTop_toTopOf="@id/ratingTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

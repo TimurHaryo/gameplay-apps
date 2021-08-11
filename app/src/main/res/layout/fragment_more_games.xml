@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.moreGames.MoreGamesFragment">
 
     <com.airbnb.epoxy.EpoxyRecyclerView
-        android:id="@+id/homeRecyclerView"
+        android:id="@+id/moreGamesRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:padding="@dimen/size_20dp"
+        android:paddingHorizontal="@dimen/size_20dp"
+        android:paddingTop="@dimen/size_20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

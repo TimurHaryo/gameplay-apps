@@ -1,40 +1,37 @@
-package com.didik.gameplay.ui.home
+package com.didik.gameplay.ui.moreGames
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.airbnb.epoxy.Carousel
-import com.didik.gameplay.databinding.FragmentHomeBinding
+import com.didik.gameplay.databinding.FragmentMoreGamesBinding
 import com.didik.gameplay.domain.model.Game
-import com.didik.gameplay.ui.moreGames.MoreGamesController
 
-class HomeFragment : Fragment() {
+class MoreGamesFragment : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentMoreGamesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentMoreGamesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val homeController = HomeController()
-        binding.homeRecyclerView.setController(homeController)
+        val homeController = MoreGamesController()
+        binding.moreGamesRecyclerView.setController(homeController)
 
         val popularGames = listOf(
             Game(
                 id = 0,
                 name = "eFootball PES 2021",
-                genres = listOf(),
+                genres = listOf("Sports"),
                 rating = 4.5f
             ),
             Game(
@@ -176,9 +173,6 @@ class HomeFragment : Fragment() {
                 rating = 4.7f
             )
         )
-        //homeController.topRatedGames = popularGames
-        homeController.popularGames = popularGames
-        homeController.newGames = popularGames
+        homeController.games = popularGames
     }
-
 }
